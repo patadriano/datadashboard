@@ -5,7 +5,7 @@ import os
 import glob
 import pandas as pd
 import pyodbc
-
+import os
 # ---- CONFIG ----
 #output directory of csv
 download_dir = r""
@@ -129,9 +129,9 @@ print(f"✅ All CSVs processed. Master CSV: {master_csv_path}")
 
 # ---- INSERT INTO SQL SERVER ----
 # Change these to your SQL Server credentials
-server = "LAPTOP-JNG26O2O\SQLEXPRESS"
-database = "Practice_1"
-table_name = "spotify_top50_temp"
+server = os.environ["SERVER"]
+database = os.environ["DATABASE"]
+table_name = os.environ["TABLE_NAME"]
 
 conn = pyodbc.connect(
     f"DRIVER={{SQL Server}};SERVER={server};DATABASE={database};Trusted_Connection=yes;TrustServerCertificate=True;"
