@@ -75,5 +75,3 @@ Since Power BI reports can’t always be publicly shared without a Power BI Pro 
 - 🧩 **.pbix Files** – download and open with **Power BI Desktop**
 
 
-## 🏷️ License
-This portfolio is licensed under the **MIT License** — feel free to explore and learn from it with proper credit.
